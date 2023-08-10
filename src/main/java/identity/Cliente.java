@@ -12,6 +12,13 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Id Long;
 	private String nome;
+	private String email;
+	private String senha;
+	private int telefone;
+	private String dateRegistro;
+	
+	
+	
 	
 
 }
