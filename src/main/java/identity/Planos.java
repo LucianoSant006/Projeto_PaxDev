@@ -2,6 +2,8 @@ package identity;
 
 import com.example.PAXDEVEnuns.TipoPlano;
 
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,19 +15,24 @@ public class Planos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Id Long;
-	private String tipoPlano;
 	private String precoMensal;
 	private String descricao;
+	
+	
+	@Enumerated(EnumType.STRING)
+	private  TipoPlano tipoPlano;
+	;
+	
 	public Id getLong() {
 		return Long;
 	}
 	public void setLong(Id l) {
 		Long = l;
 	}
-	public String getTipoPlano() {
+	public TipoPlano getTipoPlano() {
 		return tipoPlano;
 	}
-	public void setTipoPlano(String tipoPlano) {
+	public void setTipoPlano(TipoPlano tipoPlano) {
 		this.tipoPlano = tipoPlano;
 	}
 	public String getPrecoMensal() {
