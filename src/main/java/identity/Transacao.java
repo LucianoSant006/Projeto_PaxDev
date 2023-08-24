@@ -7,6 +7,7 @@ import org.springframework.cglib.core.Local;
 import jakarta.persistence.ManyToOne;
 
 public class Transacao {
+	
 	@ManyToOne
 	private Cliente cliente;
 	@ManyToOne
@@ -14,8 +15,10 @@ public class Transacao {
 	
 	private Planos planos;
 	
+	
 	private LocalDate date;
 	private  String status_transacao;
+	
 	
 	 
 
