@@ -18,7 +18,7 @@ public class Planos {
 	private String precoMensal;
 	private String descricao;
 	
-	
+
 	@Enumerated(EnumType.STRING)
 	private  TipoPlano tipoPlano;
 	;

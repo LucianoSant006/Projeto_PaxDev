@@ -1,6 +1,7 @@
 package service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +48,16 @@ public Cliente updateCliente (Long idCliente ,Cliente updatedCliente) {
 			return clienteRepository.save(cliente);
 	
 	        
+}
+
+
+public List<Cliente> getAllClients(){
+	return clienteRepository.findAll();
+}
+
+
+public Optional<Cliente> getClienteById(Long id){
+	return clienteRepository.findById(id);
 }
 
 
